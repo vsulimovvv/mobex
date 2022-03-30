@@ -1,0 +1,99 @@
+.clients {
+  @include adaptive-value('padding-top', 45, 30, 1);
+  @include adaptive-value('padding-bottom', 75, 40, 1);
+
+  &__top {
+    @include adaptive-value('margin-bottom', 40, 20, 1);
+  }
+
+  &__title {
+    @include adaptive-value('margin-bottom', 25, 15, 1);
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(auto, 390px));
+    gap: 35px;
+    @include adaptive-value('gap', 35, 20, 1);
+    justify-content: space-between;
+
+    @include breakpointsMaxW($bp-991) {
+      grid-template-columns: repeat(2, minmax(auto, 390px));
+      justify-content: center;
+    }
+    @include breakpointsMaxW($bp-768) {
+      grid-template-columns: minmax(auto, 390px);
+    }
+  }
+
+  &__item {
+    height: 100%;
+  }
+}
+
+.clients-card {
+  background-color: var(--color-white);
+  border: 6px solid #eff4f8;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 35px;
+  text-align: center;
+  height: 100%;
+  @include adaptive-value('padding', 35, 20, 1);
+
+  &--twitter {
+    .clients-card__img {
+      img {
+        width: 60px;
+        height: 60px;
+      }
+    }
+  }
+
+  &__img {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    background-color: #f9fbfd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 25px;
+    @include adaptive-value('margin-bottom', 25, 15, 1);
+    @include adaptive-value('width', 160, 140, 1);
+    @include adaptive-value('height', 160, 140, 1);
+
+    img {
+      width: 70%;
+      height: 55%;
+      object-fit: contain;
+    }
+  }
+
+  &__title {
+    font-size: 20px;
+    line-height: 25px;
+    font-weight: 700;
+    color: #2f363e;
+    margin-bottom: 15px;
+    @include adaptive-value('margin-bottom', 15, 10, 1);
+  }
+
+  &__text {
+    font-size: 14px;
+    line-height: 23px;
+    color: #5c636d;
+    margin-bottom: 25px;
+    @include adaptive-value('margin-bottom', 25, 15, 1);
+  }
+
+  &__link {
+    font-size: 13px;
+    line-height: 23px;
+    font-weight: 700;
+    text-decoration: underline;
+    color: #bdc3ca;
+    margin-top: auto;
+  }
+}

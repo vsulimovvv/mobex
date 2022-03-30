@@ -1,0 +1,29 @@
+.discount {
+  padding-top: 280px;
+  padding-bottom: 280px;
+
+  @include adaptive-value('padding-top', 280, 200, 1);
+  @include adaptive-value('padding-bottom', 280, 200, 1);
+  @include background(cover);
+  color: var(--color-white);
+
+  @include breakpointsMinW(1640px) {
+    @include background(100%);
+  }
+
+  &__title {
+    @include adaptive-value('margin-bottom', 25, 15, 1);
+    color: var(--color-white);
+  }
+
+  &__text {
+    @include adaptive-value('margin-bottom', 50, 30, 1);
+    font-size: 18px;
+    line-height: 28px;
+    font-weight: 400;
+  }
+
+  &__offer {
+    max-width: 580px;
+  }
+}

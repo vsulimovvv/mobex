@@ -1,0 +1,80 @@
+.vacancies {
+  @include adaptive-value('padding-top', 45, 30, 1);
+
+  &__top {
+    background-color: var(--color-white);
+    @include adaptive-value('margin-bottom', 45, 30, 1);
+  }
+
+  &__content {
+    background-color: #f9f9f9;
+    @include adaptive-value('padding-top', 70, 40, 1);
+    @include adaptive-value('padding-bottom', 70, 40, 1);
+  }
+
+  &__bottom {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  &__card {
+    @include adaptive-value('margin-bottom', 60, 30, 1);
+  }
+  &__btn {
+    padding: 22px;
+  }
+
+  .vacancies-card {
+    background-color: var(--color-white);
+    box-shadow: 0px 4px 43px 0px rgba(0, 0, 0, 0.07);
+    border-radius: 10px;
+    padding: 35px 40px;
+    max-width: 960px;
+    width: 100%;
+    margin: 0 auto;
+    @include adaptive-value('padding-top', 35, 25, 1);
+    @include adaptive-value('padding-bottom', 35, 25, 1);
+    @include adaptive-value('padding-left', 40, 15, 1);
+    @include adaptive-value('padding-right', 40, 15, 1);
+
+    &__top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 21px;
+      line-height: 27px;
+      font-weight: 700;
+      color: #2c2f31;
+      padding-bottom: 20px;
+      border-bottom: 1px solid #e2e2e2;
+      @include adaptive-value('margin-bottom', 30, 20, 1);
+      gap: 20px;
+
+      @include breakpointsMaxW($bp-991) {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+
+    &__box {
+      &:not(:last-child) {
+        @include adaptive-value('margin-bottom', 30, 20, 1);
+      }
+    }
+
+    &__heading {
+      display: block;
+      font-size: 16px;
+      font-weight: 700;
+      color: #3d444d;
+      @include adaptive-value('margin-bottom', 30, 20, 1);
+    }
+
+    &__item {
+      font-size: 15px;
+      &:not(:last-child) {
+        margin-bottom: 10px;
+      }
+    }
+  }
+}

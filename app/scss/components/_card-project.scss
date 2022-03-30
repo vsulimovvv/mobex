@@ -1,0 +1,60 @@
+.project-card {
+  max-width: 600px;
+  width: 100%;
+  height: 410px;
+  background-color: #f4f6f8;
+  padding: 45px 40px;
+  background-repeat: no-repeat;
+  background-position: bottom right;
+  @include adaptive-value('padding', 40, 20, 1);
+  background-size: 60%;
+
+  &__offer {
+    max-width: 200px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  &__title {
+    text-transform: uppercase;
+    font-size: 18px;
+    font-weight: 900;
+    color: #061528;
+    margin-bottom: 20px;
+  }
+
+  &__text {
+    font-size: 12px;
+    line-height: 20px;
+    color: #505b68;
+    margin-bottom: 20px;
+  }
+
+  &__link {
+    margin-top: auto;
+    font-size: 18px;
+    line-height: 1;
+    font-weight: 900;
+    color: var(--color-blue);
+    position: relative;
+    padding-right: 22px;
+    text-transform: lowercase;
+
+    @include breakpointsMaxW($bp-576) {
+      margin-top: 0;
+    }
+
+    &::after {
+      @include elDef();
+      width: 15px;
+      height: 15px;
+      @include maskImage(url('../images/icons/arrow-right.svg'), contain);
+      background-color: var(--color-blue);
+      right: 0;
+      top: 52%;
+      transform: translateY(-50%);
+    }
+  }
+}

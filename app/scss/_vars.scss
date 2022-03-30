@@ -1,0 +1,25 @@
+// Color
+:root {
+  --color-black: #000;
+  --color-white: #fff;
+
+  --color-dark: #061528;
+  --color-gray: #919293;
+  --color-bg: #f1f1f1;
+  --color-accent: #b2359e;
+  --color-blue: #1c73bd;
+  --color-text: #545f6c;
+  --color-green: #40c673;
+  --gradient: linear-gradient(20deg, #f17ac4 0%, #c0349d 100%);
+}
+
+// * breakpointsMaxW
+$bp-container: 1270px;
+$bp-991: 991.98px;
+$bp-768: 767.98px;
+$bp-576: 576px;
+$bp-360: 360.98px;
+
+// *=== Fonts
+$HelveticaNeueCyr: 'HelveticaNeueCyr';
+$Oswald: 'Oswald';

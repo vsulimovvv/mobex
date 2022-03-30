@@ -1,0 +1,66 @@
+.payment-service {
+  @include adaptive-value('padding-bottom', 75, 40, 1);
+
+  &__title {
+    margin-bottom: 30px;
+    @include adaptive-value('font-size', 35, 22, 1);
+  }
+
+  &__content {
+    @include breakpointsMaxW($bp-991) {
+      overflow-x: auto;
+    }
+  }
+
+  &__list {
+    width: 100%;
+
+    @include breakpointsMaxW($bp-991) {
+      width: 900px;
+    }
+  }
+
+  &__item {
+    color: #061528;
+    display: grid;
+    grid-template-columns: minmax(auto, 400px) 200px 200px 200px;
+    justify-content: space-between;
+    padding: 12px 30px;
+    border: 1px solid #dfdddd;
+    font-size: 16px;
+    gap: 50px;
+
+    @include breakpointsMaxW($bp-container) {
+      grid-template-columns: minmax(auto, 400px) 150px 150px 150px;
+    }
+    @include breakpointsMaxW($bp-991) {
+      grid-template-columns: minmax(auto, 300px) 100px 100px 100px;
+    }
+
+    &:not(:last-child) {
+      border-bottom: none;
+    }
+
+    &--head {
+      font-weight: 700;
+      font-size: 19px;
+      border: none;
+      @include adaptive-value('margin-bottom', 35, 20, 1);
+    }
+  }
+
+  &__price,
+  &__measurement {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__link {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    color: var(--color-accent);
+    font-weight: 700;
+  }
+}

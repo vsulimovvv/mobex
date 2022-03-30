@@ -1,0 +1,50 @@
+.our-projects {
+  @include adaptive-value('padding-bottom', 80, 40, 1);
+
+  &__title {
+    @include adaptive-value('margin-bottom', 50, 30, 1);
+
+    span {
+      color: var(--color-blue);
+    }
+  }
+
+  &__slider {
+    @include adaptive-value('margin-bottom', 55, 30, 1);
+  }
+
+  &__slides {
+    @include adaptive-value('margin-bottom', 50, 30, 1);
+  }
+
+  &__slide {
+    max-width: 600px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  &__link {
+    text-transform: uppercase;
+    padding-right: 63px;
+    position: relative;
+    display: block;
+    margin: 0 auto;
+    max-width: 185px;
+    width: 100%;
+
+    &::after {
+      @include elDef();
+      width: 15px;
+      height: 15px;
+      @include maskImage(url('../images/icons/arrow-right.svg'), contain);
+      background-color: var(--color-accent);
+      right: 23px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+
+  &--service {
+    @include adaptive-value('padding-top', 80, 40, 1);
+  }
+}

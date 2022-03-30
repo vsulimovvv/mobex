@@ -1,0 +1,859 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Favicon -->
+<link rel="shortcut icon" href="images/favicon.png" type="image/x-icon" />
+
+<!-- Link Swiper's CSS -->
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+<!-- nouislider -->
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.5.0/nouislider.min.css"
+/>
+
+<!-- Choices JS  -->
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/choices.js/public/assets/styles/choices.min.css"
+/>
+
+<!-- Custom Link -->
+<link rel="stylesheet" href="css/style.min.css" />
+
+
+    <title>Mobex</title>
+  </head>
+
+  <body>
+    <div class="popup popup--service">
+  <div class="popup__container">
+    <button class="popup__close" type="button" aria-label="Закрыть">
+      <svg width="15" height="15">
+        <use xlink:href="images/sprite.svg#close"></use>
+      </svg>
+    </button>
+    <div class="popup__wrapper">
+      <h2 class="popup__title">Заявка на услугу “Испытательный комплекс”</h2>
+      <div class="popup__text">
+        <p>Оставьте ваши данные и мы вам перезвоним.</p>
+      </div>
+
+      <form class="request__form form-submit">
+        <div class="form-submit__group">
+          <label class="form-submit__label" for="service-name">Имя</label>
+          <div class="form-submit__input-wrap form-submit__input-wrap--name">
+            <input
+              class="form-submit__input"
+              name="name"
+              id="service-name"
+              type="text"
+              placeholder="Введите ваше имя"
+              required
+            />
+          </div>
+        </div>
+        <div class="form-submit__group">
+          <label class="form-submit__label" for="service-tel">
+            Контактный телефон
+          </label>
+          <div class="form-submit__input-wrap form-submit__input-wrap--phone">
+            <input
+              class="form-submit__input"
+              name="tel"
+              id="service-tel"
+              type="tel"
+              placeholder="+7 (___) ___-__-__"
+              required
+            />
+          </div>
+        </div>
+
+        <button class="form-submit__btn btn" type="button">
+          Заказать звонок
+        </button>
+      </form>
+    </div>
+  </div>
+</div>
+
+<div class="popup popup--product">
+  <div class="popup__container">
+    <button class="popup__close" type="button" aria-label="Закрыть">
+      <svg width="15" height="15">
+        <use xlink:href="images/sprite.svg#close"></use>
+      </svg>
+    </button>
+    <div class="popup__wrapper">
+      <h2 class="popup__title">Заказ насоса ДГН СЕРИЯ</h2>
+      <div class="popup__text">
+        <p>Оставьте ваши данные и мы вам перезвоним.</p>
+      </div>
+
+      <form class="request__form form-submit">
+        <div class="form-submit__group">
+          <label class="form-submit__label" for="product-name">Имя</label>
+          <div class="form-submit__input-wrap form-submit__input-wrap--name">
+            <input
+              class="form-submit__input"
+              name="name"
+              id="product-name"
+              type="text"
+              placeholder="Введите ваше имя"
+              required
+            />
+          </div>
+        </div>
+        <div class="form-submit__group">
+          <label class="form-submit__label" for="product-tel">
+            Контактный телефон
+          </label>
+          <div class="form-submit__input-wrap form-submit__input-wrap--phone">
+            <input
+              class="form-submit__input"
+              name="tel"
+              id="product-tel"
+              type="tel"
+              placeholder="+7 (___) ___-__-__"
+              required
+            />
+          </div>
+        </div>
+
+        <button class="form-submit__btn btn" type="button">
+          Заказать звонок
+        </button>
+      </form>
+    </div>
+  </div>
+</div>
+
+<div class="popup popup--consultation">
+  <div class="popup__container">
+    <button class="popup__close" type="button" aria-label="Закрыть">
+      <svg width="15" height="15">
+        <use xlink:href="images/sprite.svg#close"></use>
+      </svg>
+    </button>
+    <div class="popup__wrapper">
+      <h2 class="popup__title">Заказать консультацию</h2>
+      <div class="popup__text">
+        <p>Оставьте ваши данные и мы вам перезвоним.</p>
+      </div>
+
+      <form class="request__form form-submit">
+        <div class="form-submit__group">
+          <label class="form-submit__label" for="consultation-name">Имя</label>
+          <div class="form-submit__input-wrap form-submit__input-wrap--name">
+            <input
+              class="form-submit__input"
+              name="name"
+              id="consultation-name"
+              type="text"
+              placeholder="Введите ваше имя"
+              required
+            />
+          </div>
+        </div>
+        <div class="form-submit__group">
+          <label class="form-submit__label" for="consultation-tel">
+            Контактный телефон
+          </label>
+          <div class="form-submit__input-wrap form-submit__input-wrap--phone">
+            <input
+              class="form-submit__input"
+              name="tel"
+              id="consultation-tel"
+              type="tel"
+              placeholder="+7 (___) ___-__-__"
+              required
+            />
+          </div>
+        </div>
+
+        <button class="form-submit__btn btn" type="button">
+          Заказать звонок
+        </button>
+      </form>
+    </div>
+  </div>
+</div>
+
+
+    <h1 class="visually-hidden">Главная</h1>
+
+    <div class="site-wrapper">
+      <header class="header">
+  <div class="overlay"></div>
+  <div class="mobile-menu">
+    <a class="mobile-menu__logo logo" href="#">
+      <img src="images/logo.png" alt="Логотип" />
+    </a>
+
+    <button class="mobile-menu__close" type="button" aria-label="Закрыть меню">
+      <svg width="19" height="19">
+        <use xlink:href="images/sprite.svg#close"></use>
+      </svg>
+    </button>
+
+    <ul class="mobile-menu__body">
+      <li class="mobile-menu__item">
+        <a class="mobile-menu__link" href="#">Главная</a>
+      </li>
+      <li class="mobile-menu__item">
+        <div class="mobile-menu-box accordion">
+          <button
+            class="mobile-menu-box__name accordion__control"
+            type="button"
+          >
+            Продукция
+          </button>
+
+          <div class="mobile-menu-box__content accordion__content">
+            <ul class="mobile-menu-box__list">
+              <li class="mobile-menu-box__item">
+                <a class="mobile-menu-box__link" href="#">Подиумы </a>
+                <a class="mobile-menu-box__link" href="#">Баблы </a>
+                <a class="mobile-menu-box__link" href="#">Пресс - Волл </a>
+                <a class="mobile-menu-box__link" href="#">Ролл ап </a>
+                <a class="mobile-menu-box__link" href="#">Ростовые фигуры </a>
+                <a class="mobile-menu-box__link" href="#">Указатели </a>
+                <a class="mobile-menu-box__link" href="#">Фото - зона </a>
+                <a class="mobile-menu-box__link" href="#">Флаги </a>
+                <a class="mobile-menu-box__link" href="#">Хештеги </a>
+                <a class="mobile-menu-box__link" href="#">Мебель </a>
+                <a class="mobile-menu-box__link" href="#">
+                  Ростовые фигуры из пенопласта
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </li>
+      <li class="mobile-menu__item">
+        <div class="mobile-menu-box accordion">
+          <button
+            class="mobile-menu-box__name accordion__control"
+            type="button"
+          >
+            Услуги
+          </button>
+
+          <div class="mobile-menu-box__content accordion__content">
+            <ul class="mobile-menu-box__list">
+              <li class="mobile-menu-box__item">
+                <a class="mobile-menu-box__link" href="#">Печать наклеек</a>
+                <a class="mobile-menu-box__link" href="#"
+                  >Резка наклеек по контуру</a
+                >
+                <a class="mobile-menu-box__link" href="#">Сварочные работы</a>
+                <a class="mobile-menu-box__link" href="#">Печать баннера</a>
+                <a class="mobile-menu-box__link" href="#">Фрезерная резка</a>
+                <a class="mobile-menu-box__link" href="#">Монтаж</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </li>
+      <li class="mobile-menu__item">
+        <a class="mobile-menu__link" href="#">Проекты</a>
+      </li>
+      <li class="mobile-menu__item">
+        <div class="mobile-menu-box accordion">
+          <button
+            class="mobile-menu-box__name accordion__control"
+            type="button"
+          >
+            Услуги
+          </button>
+
+          <div class="mobile-menu-box__content accordion__content">
+            <ul class="mobile-menu-box__list">
+              <li class="mobile-menu-box__item">
+                <a class="mobile-menu-box__link" href="#">О компании</a>
+              </li>
+              <li class="mobile-menu-box__item">
+                <a class="mobile-menu-box__link" href="#">Наш форум</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </li>
+      <li class="mobile-menu__item">
+        <a class="mobile-menu__link" href="#">Благодарности</a>
+      </li>
+      <li class="mobile-menu__item">
+        <a class="mobile-menu__link" href="#">Клиенты</a>
+      </li>
+      <li class="mobile-menu__item">
+        <a class="mobile-menu__link" href="#">Новости</a>
+      </li>
+      <li class="mobile-menu__item">
+        <a class="mobile-menu__link" href="#">Блог</a>
+      </li>
+      <li class="mobile-menu__item">
+        <a class="mobile-menu__link" href="#">Контакты</a>
+      </li>
+    </ul>
+  </div>
+  <div class="header__top">
+    <div class="container">
+      <div class="header__top-inner">
+        <a class="header__logo logo" href="index.html">
+          <img src="images/logo.png" alt="Логотип" />
+        </a>
+
+        <button class="header__toggle" type="button" aria-label="Открыть меню">
+          <span class="header__toggle-line"></span>
+        </button>
+
+        <form class="header__search form-search">
+          <label class="form-search__label" for="search">
+            <input
+              class="form-search__input"
+              type="text"
+              id="search"
+              placeholder="Поиск продукции"
+            />
+          </label>
+        </form>
+
+        <div class="header__tools">
+          <a class="header__mail" href="mailto:info@mobex.ru">info@mobex.ru</a>
+
+          <div class="header__phones">
+            <span class="header__phones-icon"> </span>
+            <a class="header__phone" href="tel:+79685150757"
+              >8 (968) 515 07 57</a
+            >
+            <a class="header__phone" href="tel:+79253941642"
+              >8 (925) 394 16 42</a
+            >
+          </div>
+
+          <button class="header__btn btn" type="button">Заказать звонок</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="header__bottom">
+    <div class="container">
+      <nav class="header__menu menu">
+        <ul class="menu__list">
+          <li class="menu__item">
+            <a class="menu__link" href="#">Главная</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link menu__link--dropdown" href="#">Продукция</a>
+
+            <div class="dropmenu">
+              <ul class="dropmenu__list">
+                <li class="dropmenu__item">
+                  <a class="dropmenu__link" href="#">Подиумы</a>
+                </li>
+                <li class="dropmenu__item">
+                  <a class="dropmenu__link" href="#">Пресс - Волл</a>
+                </li>
+                <li class="dropmenu__item">
+                  <a class="dropmenu__link" href="#">Ролл ап</a>
+                </li>
+                <li class="dropmenu__item">
+                  <a class="dropmenu__link" href="#">Ростовые фигуры</a>
+                </li>
+                <li class="dropmenu__item">
+                  <a class="dropmenu__link" href="#">Указатели</a>
+                </li>
+                <li class="dropmenu__item">
+                  <a class="dropmenu__link" href="#">Фото - зона</a>
+                </li>
+                <li class="dropmenu__item">
+                  <a class="dropmenu__link" href="#">Флаги</a>
+                </li>
+                <li class="dropmenu__item">
+                  <a class="dropmenu__link" href="#">Хештеги</a>
+                </li>
+                <li class="dropmenu__item">
+                  <a class="dropmenu__link" href="#">Мебель</a>
+                </li>
+                <li class="dropmenu__item">
+                  <a class="dropmenu__link" href="#">
+                    Ростовые фигуры из пенопласта</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </li>
+
+          <li class="menu__item">
+            <a class="menu__link menu__link--dropdown" href="#">Услуги</a>
+
+            <div class="dropmenu">
+              <ul class="dropmenu__list">
+                <li class="dropmenu__item">
+                  <a class="dropmenu__link" href="#">Печать наклеек</a>
+                </li>
+                <li class="dropmenu__item">
+                  <a class="dropmenu__link" href="#"
+                    >Резка наклеек по контуру</a
+                  >
+                </li>
+                <li class="dropmenu__item">
+                  <a class="dropmenu__link" href="#">Сварочные работы</a>
+                </li>
+                <li class="dropmenu__item">
+                  <a class="dropmenu__link" href="#">Печать баннера</a>
+                </li>
+                <li class="dropmenu__item">
+                  <a class="dropmenu__link" href="#">Фрезерная резка</a>
+                </li>
+                <li class="dropmenu__item">
+                  <a class="dropmenu__link" href="#">Монтаж</a>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="#">Проекты</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link menu__link--dropdown" href="#">О компании</a>
+
+            <div class="dropmenu">
+              <ul class="dropmenu__list">
+                <li class="dropmenu__item">
+                  <a class="dropmenu__link" href="#">О нас</a>
+                </li>
+                <li class="dropmenu__item">
+                  <a class="dropmenu__link" href="#">Наш форум</a>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="#">Благодарности</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="#">Клиенты</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="#">Новости</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="#">Блог</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="#">Контакты</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</header>
+
+
+      <div class="breadcrumbs">
+        <div class="container">
+          <ul class="breadcrumbs__list">
+            <li class="breadcrumbs__item">
+              <a class="breadcrumbs__link" href="#">Главная</a>
+            </li>
+            <li class="breadcrumbs__item">
+              <a class="breadcrumbs__link breadcrumbs__link--active"
+                >О компании</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <main class="main">
+        <section class="about about--page">
+  <div class="container">
+    <div class="about__wrapper">
+      <div class="about__offer">
+        <h2 class="about__title section-title">О компании</h2>
+
+        <div class="about__text">
+          <p>
+            ООО «Мобэкс» с 2015 года производит и монтирует печатную продукцию и
+            презентационное оборудование, необходимые для оформления различных
+            мероприятий. Готовы оперативно изготовить все вышеперечисленное в
+            соответствии с вашими макетами и проектами, а в качестве
+            альтернативы для экономии средств и времени можем предложить уже
+            опробованные готовые решения. Помимо изготовления печатной и
+            выставочной продукции оказываем услуги по монтажу, что позволяет
+            заказчику получить в результате высокое качество, безопасность и
+            надежность конструкции, а при необходимости – сервисное обслуживание
+            и услуги демонтажа.
+          </p>
+        </div>
+
+        <ul class="about__list">
+          <li class="about__item about__item--creativity">
+            креативный подход к реализации стандартных заказов
+          </li>
+          <li class="about__item about__item--decision-making">
+            экономичные решения без утраты функциональности и долговечности
+            изделий
+          </li>
+          <li class="about__item about__item--calendar">
+            возможность получения заказа в день обращения или на следующий
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="about__preview">
+    <img src="images/content/about/bg-2.jpg" alt="Про нас" />
+  </div>
+</section>
+
+        <section class="partners partners--title">
+  <div class="container">
+    <h2 class="partners__title section-title">Наши клиенты</h2>
+    <div class="partners__slider swiper">
+      <ul class="partners__slides swiper-wrapper">
+        <li class="partners__slide swiper-slide">
+          <img src="images/content/clients/1.png" alt="Фонд природа" />
+        </li>
+        <li class="partners__slide swiper-slide">
+          <img src="images/content/clients/2.png" alt="Фонд природа" />
+        </li>
+        <li class="partners__slide swiper-slide">
+          <img src="images/content/clients/3.png" alt="Фонд природа" />
+        </li>
+        <li class="partners__slide swiper-slide">
+          <img src="images/content/clients/4.png" alt="Фонд природа" />
+        </li>
+        <li class="partners__slide swiper-slide">
+          <img src="images/content/clients/5.png" alt="Фонд природа" />
+        </li>
+        <li class="partners__slide swiper-slide">
+          <img src="images/content/clients/6.png" alt="Фонд природа" />
+        </li>
+        <li class="partners__slide swiper-slide">
+          <img src="images/content/clients/7.png" alt="Фонд природа" />
+        </li>
+        <li class="partners__slide swiper-slide">
+          <img src="images/content/clients/8.png" alt="Фонд природа" />
+        </li>
+        <li class="partners__slide swiper-slide">
+          <img src="images/content/clients/9.png" alt="Фонд природа" />
+        </li>
+        <li class="partners__slide swiper-slide">
+          <img src="images/content/clients/10.png" alt="Фонд природа" />
+        </li>
+        <li class="partners__slide swiper-slide">
+          <img src="images/content/clients/11.png" alt="Фонд природа" />
+        </li>
+        <li class="partners__slide swiper-slide">
+          <img src="images/content/clients/12.png" alt="Фонд природа" />
+        </li>
+        <li class="partners__slide swiper-slide">
+          <img src="images/content/clients/13.png" alt="Фонд природа" />
+        </li>
+        <li class="partners__slide swiper-slide">
+          <img src="images/content/clients/14.png" alt="Фонд природа" />
+        </li>
+        <li class="partners__slide swiper-slide">
+          <img src="images/content/clients/15.png" alt="Фонд природа" />
+        </li>
+        <li class="partners__slide swiper-slide">
+          <img src="images/content/clients/16.png" alt="Фонд природа" />
+        </li>
+        <li class="partners__slide swiper-slide">
+          <img src="images/content/clients/17.png" alt="Фонд природа" />
+        </li>
+        <li class="partners__slide swiper-slide">
+          <img src="images/content/clients/18.png" alt="Фонд природа" />
+        </li>
+        <li class="partners__slide swiper-slide">
+          <img src="images/content/clients/19.png" alt="Фонд природа" />
+        </li>
+        <li class="partners__slide swiper-slide">
+          <img src="images/content/clients/20.png" alt="Фонд природа" />
+        </li>
+      </ul>
+
+      <div class="swiper-pagination"></div>
+    </div>
+  </div>
+</section>
+
+        <section class="connection">
+  <div class="container">
+    <div class="connection__offer">
+      <h2 class="connection__title section-title">
+        Свяжитесь <span>с нами</span>
+      </h2>
+
+      <div class="connection__info">
+        <div class="connection__box connection__box--address">
+          <span class="connection__name">Адрес</span>
+          <span>111024, г. Москва, ул. Буракова д.27 корпус 2</span>
+        </div>
+        <div class="connection__box connection__box--phones">
+          <span class="connection__name">Телефоны</span>
+
+          <div class="connection__links">
+            <a class="connection__link" href="tel:79685150757"
+              >+7 (968) 515-07-57</a
+            >
+            <a class="connection__link" href="tel:79253941642"
+              >+7 (925) 394-16-42</a
+            >
+          </div>
+
+          <div class="connection__btns">
+            <a class="connection__btn connection__btn--whatsapp btn" href="#">
+              WhatsApp
+            </a>
+            <a class="connection__btn connection__btn--telegram btn" href="#">
+              Telgram
+            </a>
+          </div>
+        </div>
+        <div class="connection__box connection__box--mail">
+          <span class="connection__name">E-mail:</span>
+          <a class="connection__link" href="mailto:info@mobex.ru"
+            >info@mobex.ru</a
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="connection__map map">
+    <iframe
+      src="https://yandex.ru/map-widget/v1/?um=constructor%3A71b956aba9c68acdb22cb633ecc4ce5c3b92e4c127463796c1c924453713427c&amp;source=constructor"
+      width="100%"
+      height="100%"
+    ></iframe>
+  </div>
+</section>
+
+        <section class="request">
+  <div class="container">
+    <div class="request__top">
+      <h2 class="request__title section-title">Онлайн - заявка</h2>
+      <div class="request__text">
+        <p>
+          Оставьте заявку и мы свяжемся с Вами в ближайшее время для уточнения
+          деталей заказа
+        </p>
+      </div>
+    </div>
+
+    <div class="request__wrapper">
+      <div class="request__preview">
+        <img src="images/content/request-bg.png" alt="Лэтуаль" />
+      </div>
+
+      <form class="request__form form-submit">
+        <select class="form-submit__select select">
+          <option value="1">Выберите нужную продукцию</option>
+          <option value="2">Выберите нужную продукцию</option>
+          <option value="2">Выберите нужную продукцию</option>
+        </select>
+
+        <label class="form-submit__group">
+          <input
+            class="form-submit__input"
+            type="text"
+            placeholder="Ваше имя"
+          />
+        </label>
+        <label class="form-submit__group">
+          <input
+            class="form-submit__input"
+            type="tel"
+            placeholder="Ваш телефон"
+          />
+        </label>
+        <label class="form-submit__group">
+          <textarea
+            class="form-submit__input form-submit__input--textarea"
+            placeholder="Комментарии к заказу"
+          ></textarea>
+        </label>
+
+        <div class="form-submit__bottom">
+          <label class="checkbox">
+            <input class="checkbox__input" type="checkbox" required />
+            <span class="checkbox__box"></span>
+            <span class="checkbox__text">
+              Отправляя заявку я соглашаюсь на
+              <a href="#"> обработку персоналных данных </a>
+            </span>
+          </label>
+
+          <button class="form-submit__btn btn" type="submit">
+            Отправить заявку
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+      </main>
+      <footer class="footer">
+  <div class="container">
+    <div class="footer__wrapper">
+      <div class="footer__col footer__col--left">
+        <a class="footer__logo logo">
+          <img src="images/logo.png" alt="Логотип" />
+        </a>
+
+        <div class="footer__copy">
+          <p>© 2022. Контент и идеи принадлежат компании Мобекс.</p>
+          <a href="">Политика конфиденциальности</a>
+        </div>
+      </div>
+      <div class="footer__right">
+        <div class="footer__col">
+          <span class="footer__heading">Компания</span>
+          <ul class="footer__list">
+            <li class="footer__item">
+              <a class="footer__link" href="#">О компании</a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__link" href="#">Клиенты</a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__link" href="#">Благодарности</a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__link" href="#">Блог</a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__link" href="#">Вакансии</a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__link" href="#">Контакты</a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer__col footer__col--double">
+          <span class="footer__heading">Продукция</span>
+
+          <ul class="footer__list">
+            <li class="footer__item">
+              <a class="footer__link" href="#">Арки</a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__link" href="#">Каше экрана</a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__link" href="#">Застройка стендов</a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__link" href="#">Подиум</a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__link" href="#">Пресс - волл</a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__link" href="#">Защитные экраны</a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__link" href="#">Неон на мероприятия</a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__link" href="#">Онлайн - студия</a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__link" href="#">Фото - зона</a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__link" href="#">Оформление сцен</a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__link" href="#">Ресепшен</a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <span class="footer__heading">Услуги</span>
+          <ul class="footer__list">
+            <li class="footer__item">
+              <a class="footer__link" href="#">Печать наклеек</a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__link" href="#">Резка наклеек по контуру</a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__link" href="#">Сварочные работы</a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__link" href="#">Печать баннера</a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__link" href="#">Фрезерная резка</a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__link" href="#">Монтаж</a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer__col footer__col--contacts">
+          <span class="footer__heading">Контакты</span>
+          <div class="footer__boxes">
+            <div class="footer__box footer__box--phones">
+              <a class="footer__link-action" href="tel:79685150757">
+                +7 (968) 515-07-57
+              </a>
+              <a class="footer__link-action" href="tel:79253941642">
+                +7 (925) 394-16-42
+              </a>
+            </div>
+            <address class="footer__box footer__box--address">
+              <p>Москва, ул. Буракова 27 корпус 2</p>
+            </address>
+            <div class="footer__box footer__box--mail">
+              <a class="footer__link-action" href="mailto:info@mobex.ru"
+                >info@mobex.ru</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <div class="footer__copy footer__copy--mobile">
+          <p>© 2022. Контент и идеи принадлежат компании Мобекс.</p>
+          <a href="">Политика конфиденциальности</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+    </div>
+
+    <!-- Swiper JS -->
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+<!-- nouislider -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.5.0/nouislider.min.js"></script>
+
+<!-- jQuery -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+<!-- Choices JS -->
+<script src="https://cdn.jsdelivr.net/npm/choices.js/public/assets/scripts/choices.min.js"></script>
+
+<!-- Input Mask -->
+<script
+  src="https://cdn.jsdelivr.net/npm/jquery.maskedinput@1.4.1/src/jquery.maskedinput.min.js"
+  type="text/javascript"
+></script>
+
+<!-- JS -->
+<script src="js/main.min.js"></script>
+
+  </body>
+</html>

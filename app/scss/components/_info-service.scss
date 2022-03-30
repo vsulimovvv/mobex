@@ -1,0 +1,16 @@
+.info-service {
+  @include adaptive-value('padding-bottom', 75, 40, 1);
+
+  &__title {
+    @include adaptive-value('margin-bottom', 25, 15, 1);
+    @include adaptive-value('font-size', 35, 24, 1);
+  }
+
+  &__text {
+    p {
+      &:not(:last-child) {
+        @include adaptive-value('margin-bottom', 20, 10, 1);
+      }
+    }
+  }
+}

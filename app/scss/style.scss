@@ -1,0 +1,62 @@
+@import 'libs';
+@import 'reset';
+@import 'vars';
+@import 'mixins';
+@import 'fonts';
+@import 'global';
+
+@import './animations';
+
+// * ===== Other components
+@import './components/breadcrumbs';
+@import './components/accordion';
+@import './components/swiper-options';
+@import './components/custom-checkbox';
+@import './components/custom-select';
+@import './components/popups';
+@import './components/menu';
+@import './components/menu-mobile';
+@import './components/form-submit';
+
+// * ===== Card Components
+@import './components/card-product';
+@import './components/card-project';
+@import './components/card-service';
+@import './components/card-blog';
+@import './components/card-news';
+
+// * ===== Section Components
+@import './components/footer';
+@import './components/header';
+@import './components/hero';
+@import './components/contacts';
+@import './components/catalog';
+@import './components/our-projects';
+@import './components/projects';
+@import './components/production';
+@import './components/about';
+@import './components/partners';
+@import './components/blog-new';
+@import './components/blog';
+@import './components/connection';
+@import './components/news';
+@import './components/services';
+@import './components/request';
+@import './components/gratitude';
+@import './components/vacancies';
+@import './components/clients';
+@import './components/descr-project';
+@import './components/similar-projects';
+@import './components/descr-client';
+@import './components/products';
+@import './components/showcase';
+@import './components/requisites';
+@import './components/write-us';
+@import './components/descr-service';
+@import './components/payment-service';
+@import './components/advantages-service';
+@import './components/info-service';
+@import './components/product-page';
+@import './components/similar-products';
+@import './components/discount';
+@import './components/process';

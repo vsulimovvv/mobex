@@ -1,0 +1,44 @@
+.project {
+  @include adaptive-value('padding-top', 45, 30, 1);
+  @include adaptive-value('padding-bottom', 55, 35, 1);
+
+  &__title {
+    @include adaptive-value('margin-bottom', 40, 30, 1);
+  }
+
+  &__wrapper {
+    display: grid;
+    grid-template-columns: 1.07fr 1fr;
+    gap: 40px;
+
+    @include breakpointsMaxW($bp-991) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__text {
+    font-size: 15px;
+    line-height: 27px;
+    color: var(--color-text);
+
+    p {
+      &:not(:last-child) {
+        margin-bottom: 20px;
+      }
+    }
+  }
+
+  &__preview {
+    @include adaptive-value('margin-bottom', 55, 30, 1);
+
+    max-width: 620px;
+    width: 100%;
+    height: 455px;
+    @include adaptive-value('height', 455, 300, 1);
+
+    img {
+      @include img(cover);
+      border-radius: 10px;
+    }
+  }
+}

@@ -1,0 +1,95 @@
+.hero {
+  height: 100%;
+  width: 100%;
+  background-color: var(--color-bg);
+  background: linear-gradient(
+    -180deg,
+    rgba(235, 232, 230, 1) 30%,
+    rgba(199, 191, 176, 1) 50%
+  );
+
+  .swiper-slide {
+    @include backgroundImage(url('../images/content/hero-bg.jpg'), cover);
+    box-sizing: border-box;
+
+    @include breakpointsMaxW($bp-768) {
+      background: none;
+    }
+  }
+
+  &__preview {
+    max-width: 520px;
+    width: 100%;
+    height: 385px;
+
+    display: none;
+
+    @include breakpointsMaxW($bp-768) {
+      display: block;
+      @include background(contain);
+      height: calc(300px + (385 - 300) * ((100vw - 375px) / (768 - 375)));
+      margin: 0 auto;
+    }
+  }
+
+  &__wrapper {
+    min-height: 850px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding-top: 250px;
+    padding-bottom: 150px;
+
+    @include adaptive-value('padding-top', 250, 150, 1);
+    @include adaptive-value('padding-bottom', 150, 50, 1);
+    @include adaptive-value('min-height', 850, 450, 1);
+  }
+
+  &__offer {
+    max-width: 480px;
+
+    @include breakpointsMaxW($bp-768) {
+      margin-bottom: 50px;
+      max-width: 100%;
+    }
+  }
+
+  &__title {
+    @include adaptive-value('margin-bottom', 30, 20, 1);
+
+    span {
+      display: block;
+
+      @include breakpointsMaxW($bp-768) {
+        display: inline;
+      }
+    }
+  }
+
+  &__text {
+    @include adaptive-value('margin-bottom', 55, 30, 1);
+  }
+
+  .arrows {
+    position: absolute;
+    bottom: 50px;
+    z-index: 10;
+    width: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .swiper-button-next,
+    .swiper-button-prev {
+      position: static;
+      width: 24px;
+      height: 24px;
+      gap: 10px;
+
+      &::after {
+        @include maskImage(url('../images/icons/arrow-right.svg'), contain);
+      }
+    }
+  }
+}

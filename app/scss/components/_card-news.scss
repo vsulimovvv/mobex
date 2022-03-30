@@ -1,0 +1,44 @@
+.news-card {
+  max-width: 390px;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  @include adaptive-value('gap', 20, 10, 1);
+
+  &__img {
+    width: 100%;
+    @include adaptive-value('height', 300, 200, 1);
+
+    img {
+      border-radius: 10px;
+      @include img(cover);
+    }
+  }
+
+  &__time {
+    font-size: 12px;
+    line-height: 28px;
+    color: #919293;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  &__title {
+    font-size: 19px;
+    line-height: 28px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #353c45;
+    
+    &:hover {
+      a {
+        color: var(--color-blue);
+      }
+    }
+
+    span {
+      display: block;
+    }
+  }
+}

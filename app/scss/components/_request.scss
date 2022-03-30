@@ -1,0 +1,118 @@
+.request {
+  @include adaptive-value('padding-top', 80, 40, 1);
+  @include adaptive-value('padding-bottom', 80, 40, 1);
+
+  &--bg {
+    background-color: var(--color-bg);
+  }
+
+  &__top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    @include adaptive-value('margin-bottom', 75, 40, 1);
+  }
+
+  &__title {
+    @include adaptive-value('margin-bottom', 30, 20, 1);
+  }
+
+  &__text {
+    max-width: 435px;
+    font-size: 15px;
+    line-height: 25px;
+    color: #545f6c;
+  }
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+    align-items: flex-start;
+    padding-left: 75px;
+
+    @include breakpointsMaxW($bp-container) {
+      padding-left: 30px;
+    }
+
+    @include breakpointsMaxW($bp-991) {
+      flex-direction: column;
+      align-items: flex-start;
+      padding-left: 0;
+    }
+  }
+
+  &__form {
+    max-width: 530px;
+    width: 100%;
+
+    @include breakpointsMaxW($bp-991) {
+      max-width: 100%;
+      order: -1;
+    }
+  }
+
+  &__preview {
+    max-width: 480px;
+    width: 100%;
+    height: 445px;
+
+    img {
+      @include img(contain);
+    }
+
+    @include breakpointsMaxW($bp-991) {
+      margin: 0 auto;
+    }
+
+    @include breakpointsMaxW($bp-576) {
+      height: calc(280px + (445 - 280) * ((100vw - 375px) / (576 - 375)));
+    }
+  }
+  &--bg-dark {
+    @include background(cover);
+
+    .request {
+      color: var(--color-white);
+
+      &__top {
+        order: -1;
+        max-width: 100%;
+        margin: 0 auto;
+      }
+
+      &__title {
+        color: var(--color-white);
+      }
+
+      &__text {
+        color: #98a4af;
+      }
+    }
+    .form-submit {
+      &__input {
+        border-bottom-color: #aab2bc;
+        color: var(--color-white);
+
+        &::placeholder {
+          color: #aab2bc;
+        }
+
+        &:focus {
+          border-bottom-color: var(--color-white);
+        }
+      }
+      .checkbox {
+        &__box {
+          background-color: var(--color-white);
+        }
+        &__text {
+          a {
+            color: var(--color-blue);
+          }
+        }
+      }
+    }
+  }
+}

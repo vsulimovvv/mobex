@@ -1,0 +1,65 @@
+.catalog {
+  @include adaptive-value('padding-top', 75, 40, 1);
+  @include adaptive-value('padding-bottom', 75, 40, 1);
+
+  &__top {
+    display: grid;
+    grid-template-columns: minmax(auto, 230px) minmax(auto, 700px) minmax(
+        auto,
+        190px
+      );
+    align-items: center;
+    gap: 50px;
+    justify-content: space-between;
+
+    @include adaptive-value('margin-bottom', 60, 30, 1);
+
+    @include breakpointsMaxW($bp-991) {
+      grid-template-columns: 1fr;
+      gap: 30px;
+    }
+  }
+
+  &__title {
+    span {
+      display: block;
+      color: var(--color-blue);
+    }
+  }
+
+  &__text {
+    font-size: 15px;
+    line-height: 1.6;
+    font-weight: 400;
+    color: #545f6c;
+  }
+
+  &__btn {
+    max-width: 185px;
+    position: relative;
+    padding-right: 47px;
+
+    &::after {
+      @include elDef();
+      right: 24px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 15px;
+      height: 15px;
+      @include maskImage(url('../images/icons/arrow-right.svg'), contain);
+      background-color: var(--color-accent);
+      transition: 150ms ease;
+    }
+  }
+
+  &__slides {
+    display: flex;
+    align-items: center;
+    @include adaptive-value('margin-bottom', 60, 50, 1);
+  }
+
+  &__slide {
+    max-width: 290px;
+    width: 100%;
+  }
+}

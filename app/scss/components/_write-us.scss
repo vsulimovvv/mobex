@@ -1,0 +1,38 @@
+.write-us {
+  @include adaptive-value('padding-top', 70, 40, 1);
+  @include adaptive-value('padding-bottom', 70, 40, 1);
+
+  &__top {
+    @include adaptive-value('margin-bottom', 50, 30, 1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  &__title {
+    @include adaptive-value('margin-bottom', 30, 20, 1);
+  }
+
+  .form-submit {
+    &__top {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+
+      @include breakpointsMaxW($bp-768) {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+
+    &__bottom {
+      justify-content: center;
+      gap:30px;
+
+      @include breakpointsMaxW($bp-768) {
+        flex-direction: column;
+      }
+    }
+  }
+}

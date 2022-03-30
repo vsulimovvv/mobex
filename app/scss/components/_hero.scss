@@ -71,6 +71,23 @@
     @include adaptive-value('margin-bottom', 55, 30, 1);
   }
 
+  &__btn {
+    padding: 21px;
+    padding-left: 45px;
+    position: relative;
+
+    &::after {
+      @include elDef();
+      width: 17px;
+      height: 17px;
+      @include maskImage(url('../images/icons/grid.svg'), contain);
+      background-color: var(--color-white);
+      top: 50%;
+      transform: translateY(-50%);
+      left: 15px;
+    }
+  }
+
   .arrows {
     position: absolute;
     bottom: 50px;

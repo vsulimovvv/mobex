@@ -1,0 +1,266 @@
+<header class="header header--main">
+  <div class="overlay"></div>
+  <div class="mobile-menu">
+    <a class="mobile-menu__logo logo" href="#">
+      <img src="images/logo.png" alt="Логотип" />
+    </a>
+
+    <button class="mobile-menu__close" type="button" aria-label="Закрыть меню">
+      <svg width="19" height="19">
+        <use xlink:href="images/sprite.svg#close"></use>
+      </svg>
+    </button>
+
+    <ul class="mobile-menu__body">
+      <li class="mobile-menu__item">
+        <a class="mobile-menu__link" href="#">Главная</a>
+      </li>
+      <li class="mobile-menu__item">
+        <div class="mobile-menu-box accordion">
+          <button
+            class="mobile-menu-box__name accordion__control"
+            type="button"
+          >
+            Продукция
+          </button>
+
+          <div class="mobile-menu-box__content accordion__content">
+            <ul class="mobile-menu-box__list">
+              <li class="mobile-menu-box__item">
+                <a class="mobile-menu-box__link" href="#">Подиумы </a>
+                <a class="mobile-menu-box__link" href="#">Баблы </a>
+                <a class="mobile-menu-box__link" href="#">Пресс - Волл </a>
+                <a class="mobile-menu-box__link" href="#">Ролл ап </a>
+                <a class="mobile-menu-box__link" href="#">Ростовые фигуры </a>
+                <a class="mobile-menu-box__link" href="#">Указатели </a>
+                <a class="mobile-menu-box__link" href="#">Фото - зона </a>
+                <a class="mobile-menu-box__link" href="#">Флаги </a>
+                <a class="mobile-menu-box__link" href="#">Хештеги </a>
+                <a class="mobile-menu-box__link" href="#">Мебель </a>
+                <a class="mobile-menu-box__link" href="#">
+                  Ростовые фигуры из пенопласта
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </li>
+      <li class="mobile-menu__item">
+        <div class="mobile-menu-box accordion">
+          <button
+            class="mobile-menu-box__name accordion__control"
+            type="button"
+          >
+            Услуги
+          </button>
+
+          <div class="mobile-menu-box__content accordion__content">
+            <ul class="mobile-menu-box__list">
+              <li class="mobile-menu-box__item">
+                <a class="mobile-menu-box__link" href="#">Печать наклеек</a>
+                <a class="mobile-menu-box__link" href="#"
+                  >Резка наклеек по контуру</a
+                >
+                <a class="mobile-menu-box__link" href="#">Сварочные работы</a>
+                <a class="mobile-menu-box__link" href="#">Печать баннера</a>
+                <a class="mobile-menu-box__link" href="#">Фрезерная резка</a>
+                <a class="mobile-menu-box__link" href="#">Монтаж</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </li>
+      <li class="mobile-menu__item">
+        <a class="mobile-menu__link" href="#">Проекты</a>
+      </li>
+      <li class="mobile-menu__item">
+        <div class="mobile-menu-box accordion">
+          <button
+            class="mobile-menu-box__name accordion__control"
+            type="button"
+          >
+            Услуги
+          </button>
+
+          <div class="mobile-menu-box__content accordion__content">
+            <ul class="mobile-menu-box__list">
+              <li class="mobile-menu-box__item">
+                <a class="mobile-menu-box__link" href="#">О компании</a>
+              </li>
+              <li class="mobile-menu-box__item">
+                <a class="mobile-menu-box__link" href="#">Наш форум</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </li>
+      <li class="mobile-menu__item">
+        <a class="mobile-menu__link" href="#">Благодарности</a>
+      </li>
+      <li class="mobile-menu__item">
+        <a class="mobile-menu__link" href="#">Клиенты</a>
+      </li>
+      <li class="mobile-menu__item">
+        <a class="mobile-menu__link" href="#">Новости</a>
+      </li>
+      <li class="mobile-menu__item">
+        <a class="mobile-menu__link" href="#">Блог</a>
+      </li>
+      <li class="mobile-menu__item">
+        <a class="mobile-menu__link" href="#">Контакты</a>
+      </li>
+    </ul>
+  </div>
+  <div class="header__top">
+    <div class="container">
+      <div class="header__top-inner">
+        <a class="header__logo logo" href="index.html">
+          <img src="images/logo.png" alt="Логотип" />
+        </a>
+
+        <button class="header__toggle" type="button" aria-label="Открыть меню">
+          <span class="header__toggle-line"></span>
+        </button>
+
+        <form class="header__search form-search">
+          <label class="form-search__label" for="search">
+            <input
+              class="form-search__input"
+              type="text"
+              id="search"
+              placeholder="Поиск продукции"
+            />
+          </label>
+        </form>
+
+        <div class="header__tools">
+          <a class="header__mail" href="mailto:info@mobex.ru">info@mobex.ru</a>
+
+          <div class="header__phones">
+            <span class="header__phones-icon"> </span>
+            <a class="header__phone" href="tel:+79685150757"
+              >8 (968) 515 07 57</a
+            >
+            <a class="header__phone" href="tel:+79253941642"
+              >8 (925) 394 16 42</a
+            >
+          </div>
+
+          <button class="header__btn btn" type="button">Заказать звонок</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="header__bottom">
+    <div class="container">
+      <nav class="header__menu menu">
+        <ul class="menu__list">
+          <li class="menu__item">
+            <a class="menu__link menu__link--active" href="#">Главная</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link menu__link--dropdown" href="#">Продукция</a>
+
+            <div class="dropmenu">
+              <ul class="dropmenu__list">
+                <li class="dropmenu__item">
+                  <a class="dropmenu__link" href="#">Подиумы</a>
+                </li>
+                <li class="dropmenu__item">
+                  <a class="dropmenu__link" href="#">Пресс - Волл</a>
+                </li>
+                <li class="dropmenu__item">
+                  <a class="dropmenu__link" href="#">Ролл ап</a>
+                </li>
+                <li class="dropmenu__item">
+                  <a class="dropmenu__link" href="#">Ростовые фигуры</a>
+                </li>
+                <li class="dropmenu__item">
+                  <a class="dropmenu__link" href="#">Указатели</a>
+                </li>
+                <li class="dropmenu__item">
+                  <a class="dropmenu__link" href="#">Фото - зона</a>
+                </li>
+                <li class="dropmenu__item">
+                  <a class="dropmenu__link" href="#">Флаги</a>
+                </li>
+                <li class="dropmenu__item">
+                  <a class="dropmenu__link" href="#">Хештеги</a>
+                </li>
+                <li class="dropmenu__item">
+                  <a class="dropmenu__link" href="#">Мебель</a>
+                </li>
+                <li class="dropmenu__item">
+                  <a class="dropmenu__link" href="#">
+                    Ростовые фигуры из пенопласта</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </li>
+
+          <li class="menu__item">
+            <a class="menu__link menu__link--dropdown" href="#">Услуги</a>
+
+            <div class="dropmenu">
+              <ul class="dropmenu__list">
+                <li class="dropmenu__item">
+                  <a class="dropmenu__link" href="#">Печать наклеек</a>
+                </li>
+                <li class="dropmenu__item">
+                  <a class="dropmenu__link" href="#"
+                    >Резка наклеек по контуру</a
+                  >
+                </li>
+                <li class="dropmenu__item">
+                  <a class="dropmenu__link" href="#">Сварочные работы</a>
+                </li>
+                <li class="dropmenu__item">
+                  <a class="dropmenu__link" href="#">Печать баннера</a>
+                </li>
+                <li class="dropmenu__item">
+                  <a class="dropmenu__link" href="#">Фрезерная резка</a>
+                </li>
+                <li class="dropmenu__item">
+                  <a class="dropmenu__link" href="#">Монтаж</a>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="#">Проекты</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link menu__link--dropdown" href="#">О компании</a>
+
+            <div class="dropmenu">
+              <ul class="dropmenu__list">
+                <li class="dropmenu__item">
+                  <a class="dropmenu__link" href="#">О нас</a>
+                </li>
+                <li class="dropmenu__item">
+                  <a class="dropmenu__link" href="#">Наш форум</a>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="#">Благодарности</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="#">Клиенты</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="#">Новости</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="#">Блог</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="#">Контакты</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</header>

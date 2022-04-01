@@ -67,7 +67,7 @@ body {
 
 // * Заголовок секции
 .section-title {
-  @include adaptive-value('font-size', 40, 25, 1);
+  @include adaptive-value('font-size', 40, 28, 1);
   color: var(--color-dark);
   line-height: 1.3;
 }

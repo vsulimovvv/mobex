@@ -9,66 +9,79 @@
   );
 
   .swiper-slide {
-    @include backgroundImage(url('../images/content/hero-bg.jpg'), cover);
     box-sizing: border-box;
+  }
 
-    @include breakpointsMaxW($bp-768) {
-      background: none;
+  &__wrapper {
+    min-height: 850px;
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+    padding-top: 250px;
+    padding-bottom: 150px;
+
+    @include adaptive-value('padding-top', 250, 120, 1);
+    @include adaptive-value('padding-bottom', 150, 50, 1);
+    @include adaptive-value('min-height', 850, 450, 1);
+
+    @include breakpointsMaxW($bp-991) {
+      grid-template-columns: 1fr;
+      gap: 30px;
     }
   }
 
   &__preview {
-    max-width: 520px;
-    width: 100%;
-    height: 385px;
+    width: 650px;
+    height: 550px;
+    @include background(contain);
 
-    display: none;
+    @include breakpointsMaxW($bp-container) {
+      width: calc(450px + (650 - 450) * ((100vw - 991px) / (1270 - 991)));
+    }
 
-    @include breakpointsMaxW($bp-768) {
-      display: block;
-      @include background(contain);
+    @include breakpointsMaxW($bp-991) {
+      width: calc(300px + (450 - 300) * ((100vw - 375px) / (991 - 375)));
+    }
+
+    @include breakpointsMaxW($bp-991) {
       height: calc(300px + (385 - 300) * ((100vw - 375px) / (768 - 375)));
       margin: 0 auto;
     }
   }
 
-  &__wrapper {
-    min-height: 850px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
-    padding-top: 250px;
-    padding-bottom: 150px;
-
-    @include adaptive-value('padding-top', 250, 150, 1);
-    @include adaptive-value('padding-bottom', 150, 50, 1);
-    @include adaptive-value('min-height', 850, 450, 1);
-  }
-
   &__offer {
     max-width: 480px;
 
+    @include breakpointsMaxW($bp-991) {
+      max-width: 80%;
+      text-align: center;
+      margin: 0 auto;
+    }
+
     @include breakpointsMaxW($bp-768) {
-      margin-bottom: 50px;
       max-width: 100%;
     }
   }
 
   &__title {
-    @include adaptive-value('margin-bottom', 30, 20, 1);
+    @include adaptive-value('margin-bottom', 30, 15, 1);
 
     span {
       display: block;
 
-      @include breakpointsMaxW($bp-768) {
+      @include breakpointsMaxW($bp-991) {
         display: inline;
+      }
+      @include breakpointsMaxW($bp-576) {
+        display: block;
       }
     }
   }
 
   &__text {
-    @include adaptive-value('margin-bottom', 55, 30, 1);
+    @include adaptive-value('margin-bottom', 55, 20, 1);
   }
 
   &__btn {
